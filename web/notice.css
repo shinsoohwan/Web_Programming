@@ -1,0 +1,29 @@
+
+
+			#container{display: table; table-layout: fixed; position: relative; max-width:80%;min-width: 80%; min-height: 100%; margin: 0 auto; padding-top: 50px;}
+		.table1 table{border-top: 1px solid #717171;}
+		.table1 table thead{display: table-header-group; vertical-align: middle; border-color: inherit;}
+		.table1 table thead tr th{padding: 10px 0; border-bottom: 1px solid #dbdbdb; background: #f7f7f7;}
+		.table1 table tbody{display: table-row-group; vertical-align: middle;border-color: inherit;}
+		.table1 table tr{text-align:center;}
+		.table1 table tr td{    border-bottom: 1px solid #dbdbdb; color: #444;}
+		.table1 table tr td a:link{color: black; text-decoration: none}
+		.table1 table tr td a:visited{color: black; text-decoration: none}
+		.table1 table tr td a:hover{color: black; text-decoration: underline}
+		.section-header{overflow: hidden; margin: 0; padding: 0 0 1px;}
+		
+		
+		.section-header a{float: right;text-align: center;font-size: 13px; text-decoration: none;
+			width: 75px; height: 30px; line-height: 28px;
+		    background: #979797;
+    border: 1px solid #979797;
+	color: #fff; margin-top: 20px;}
+	.section-header a:hover{background:#444444; }
+		.h2{display: block; float: left; }
+        .pagination{padding: 20px 0 0; text-align: center; list-style: none;}
+			.pagination li{display: inline-block; border: 1px solid #fff; margin: 0px 2px;}
+			.pagination li span{    height: 21px;
+    padding: 0px 10px 4px;
+    text-align: center;
+    display: block;}
+			.pagination .active{border: 1px solid #ff4c2e; color: #ff4c2e;}

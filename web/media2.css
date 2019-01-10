@@ -1,0 +1,55 @@
+
+@media(max-width:500px){
+   
+
+   #header{display: none;}
+   #header1{display: block; padding-left: 20px;}
+
+   #menu2{height: 165px; text-align: left; }
+   #menu2 ul#m1{display: none;}
+   #menu2 ul#m2{display: block;}
+  
+
+}
+
+@media(max-width:900px){
+    #top_menu{display: none;} 
+   #top_menu1{display: block;}
+       #main-good-list ul{display: block;}
+    
+    #top_menu{padding-bottom: 30px;}
+     #top_menu .slogan{display: none;}
+     #top_menu ul{float: left; padding-left: 150px;}
+
+  
+    #header .ad-left{display: none;}
+    #header .ad{display: none;}
+    #header h1{padding-left: 230px;}
+
+    #menu1{display: none;}
+    #menu2{display: block;}
+
+    #slide{display: none;}
+    #main-good-list h2{display: none;}
+
+   
+    #main-good-list ul li.right{float: none; padding: 0px 0px;}
+    #main-good-list ul li.left{ padding: 0px 0px;}
+    #main-good-list ul li img{max-width: 100%;}
+    #bottom{display: none;}
+    #footer{display: none;}
+
+} 
+@media(max-width:1250px){
+    #header .ad{display: none;}
+}
+@media(max-width: 1376px){
+    #slide #lft{padding-top: 0px; padding-left: 20px;}
+    #slide #rght{display: none;}
+    #slide #rght2{display: inline-block;}
+
+    #main-good-list{margin-bottom: 60px;}
+    #main-good-list ul li.right{float: left; padding-left: 50px;}
+    #main-good-list ul li.left{ padding-left: 50px;}
+    
+}

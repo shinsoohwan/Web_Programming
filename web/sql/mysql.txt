@@ -1,0 +1,95 @@
+게시판이 좀 복잡해보여서 게시판 빼고
+판매자, 구매자, 물품, 주문 이렇게 테이블 만들었습니다.
+이름보면 대충 알게끔 칼럼명 지었구요
+이해안가는거있음 톡주세요.
+
+phpmyadmin에서 할때는 맨위에 두줄 빼고
+create database 부터 복붙하면 됩니다.
+
+phpmyadmin에서는 전체 한꺼번에 복붙해도 잘 되는데 콘솔에서는 안해봤어요.
+한번에 안되면 한줄씩 하셔야될듯
+
+----------------------------------
+
+mysql -u root -p
+(password)
+create database web;
+use web;
+
+create table seller
+(
+	s_id varchar(20) primary key,
+	name varchar(20),
+	phone varchar(20),
+	address varchar(60),
+	account varchar(20)
+);
+
+insert into seller values
+('0000001', 'seller1', '010-0000-0001', 'address0000001', '1000-00-000001');
+insert into seller values
+('0000002', 'seller2', '010-0000-0002', 'address0000002', '1000-00-000002');
+insert into seller values
+('0000003', 'seller3', '010-0000-0003', 'address0000003', '1000-00-000003');
+
+create table buyer
+(
+	b_id varchar(20) primary key,
+	name varchar(20),
+	phone varchar(20),
+	address varchar(60)
+);
+
+insert into buyer values
+('0000001', 'buyer1', '010-0000-0001', 'address0000001');
+insert into buyer values
+('0000002', 'buyer2', '010-0000-0002', 'address0000002');
+insert into buyer values
+('0000003', 'buyer3', '010-0000-0003', 'address0000003');
+
+create table product
+(
+	p_id varchar(20) primary key,
+	s_id varchar(20),
+	name varchar(20),
+	category1 varchar(20) not null,
+	category2 varchar(20),
+	start_time date,
+	content text,
+	img_dir varchar(40),
+	foreign key(s_id) references seller(s_id) on delete set null
+);
+
+insert into product values
+('0000001', '0000003', 'product1', 'category1-1', 'category2-1',
+'2017-11-01', 'Hello world!', 'img/picture.jpg');
+insert into product values
+('0000002', '0000002', 'product2', 'category1-2', 'category2-3',
+'2017-11-02', 'Hello world!', 'img/picture2.jpg');
+insert into product values
+('0000003', '0000003', 'product3', 'category1-3', 'category2-2',
+'2017-11-03', 'Hello world!', 'img/picture3.jpg');
+insert into product values
+('0000004', '0000001', 'product14', 'category1-1', 'category2-1',
+'2017-11-04', 'Hello world!', 'img/picture4.jpg');
+insert into product values
+('0000005', '0000001', 'product5', 'category1-2', 'category2-3',
+'2017-11-05', 'Hello world!', 'img/picture5.jpg');
+
+create table orders
+(
+	o_id varchar(20) primary key,
+	p_id varchar(20),
+	s_id varchar(20),
+	b_id varchar(20),
+	order_time date,
+	current varchar(20),
+	delivery varchar(30),
+	foreign key(p_id) references product(p_id) on delete set null,
+	foreign key(s_id) references seller(s_id) on delete set null,
+	foreign key(b_id) references buyer(b_id) on delete set null
+);
+
+insert into orders values
+('0000001', '0000002', '0000001', '0000003', '2017-11-02', 'ordering',
+'000-0000-001');

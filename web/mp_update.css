@@ -1,0 +1,13 @@
+#form_inner table tbody tr td span{margin-left: 15px;}
+
+.top .mp-menu{margin-top: 50px; margin-right: 5px; float: right; width: 103px;
+    height: 35px;
+	line-height: 33px;
+	background: white;
+    font-size: 14px;    border: 1px solid #333;
+    color: #333;
+background: #f9f9f9;}
+.top .mp-menu:hover{text-decoration: underline; background:#ddd; cursor: pointer;}
+    .top .mp-menu a:link{color: #333; text-decoration: none;}
+	.top .mp-menu a:visited{color: #333; text-decoration: none;}
+	.top .mp-menu a:hover{color: #333; text-decoration: underline;}

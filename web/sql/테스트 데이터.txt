@@ -1,0 +1,135 @@
+insert into member
+values('admin', '6c7ca345f63f835cb353ff15bd6c5e052ec08e7a', 'admin');
+
+insert into member
+values('buyer1', '601f1889667efaebb33b8c12572835da3f027f78', 'buyer');
+
+insert into member
+values('buyer2', '601f1889667efaebb33b8c12572835da3f027f78', 'buyer');
+
+insert into member
+values('buyer3', '601f1889667efaebb33b8c12572835da3f027f78', 'buyer');
+
+insert into member
+values('buyer4', '601f1889667efaebb33b8c12572835da3f027f78', 'buyer');
+
+insert into member
+values('buyer5', '601f1889667efaebb33b8c12572835da3f027f78', 'buyer');
+
+insert into member
+values('seller1', '601f1889667efaebb33b8c12572835da3f027f78', 'seller');
+
+insert into member
+values('seller2', '601f1889667efaebb33b8c12572835da3f027f78', 'seller');
+
+insert into member
+values('seller3', '601f1889667efaebb33b8c12572835da3f027f78', 'seller');
+
+insert into member
+values('seller4', '601f1889667efaebb33b8c12572835da3f027f78', 'seller');
+
+insert into member
+values('seller5', '601f1889667efaebb33b8c12572835da3f027f78', 'seller');
+
+
+insert into seller
+values('seller1', 'panmaeja1', '01011111111', 'woori1', '11-2222-3333-11');
+
+insert into seller
+values('seller2', 'panmaeja2', '01011112222', 'woori2', '11-2222-3333-22');
+
+insert into seller
+values('seller3', 'panmaeja3', '01011113333', 'woori3', '11-2222-3333-33');
+
+insert into seller
+values('seller4', 'panmaeja4', '01011114444', 'woori4', '11-2222-3333-44');
+
+insert into seller
+values('seller5', 'panmaeja5', '01011115555', 'woori5', '11-2222-3333-55');
+
+
+insert into buyer
+values('buyer1', 'gumaeja1', '01022221111', 'seoul gangnam1');
+
+insert into buyer
+values('buyer2', 'gumaeja2', '01022222222', 'seoul gangnam2');
+
+insert into buyer
+values('buyer3', 'gumaeja3', '01022223333', 'seoul gangnam3');
+
+insert into buyer
+values('buyer4', 'gumaeja4', '01022224444', 'seoul gangnam4');
+
+insert into buyer
+values('buyer5', 'gumaeja5', '01022225555', 'seoul gangnam5');
+
+
+insert into product
+values(null, 'seller1', 'kimch2', 'kimch', null, 10000, '1kg',
+'2017-11-13', 'this is content', 'img_main/main-good02.jpg');
+
+insert into product
+values(null, 'seller3', 'kimch4', 'kimch', null, 40000, '4kg',
+'2017-11-14', 'this is content', 'img_main/main-good03.jpg');
+
+insert into product
+values(null, 'seller5', 'kimch6', 'kimch', null, 20000, '2kg',
+'2017-11-14', 'this is content', 'img_main/main-good04.jpg');
+
+insert into product
+values(null, 'seller1', 'kimch1', 'kimch', null, 30000, '3kg',
+'2017-11-15', 'this is content', 'img_main/main-good05.jpg');
+
+insert into product
+values(null, 'seller5', 'kimch3', 'kimch', null, 50000, '5kg',
+'2017-11-17', 'this is content', 'img_main/main-good06.jpg');
+
+insert into product
+values(null, 'seller1', 'kimch5', 'kimch', null, 60000, '6kg',
+'2017-11-21', 'this is content', 'img_main/main-good07.jpg');
+
+
+insert into orders
+values(null, 1, 'seller1', 'buyer1', 1, 10000, '2017-12-11',
+'order complete', null);
+
+insert into orders
+values(null, 1, 'seller1', 'buyer2', 2, 20000, '2017-12-11',
+'order complete', null);
+
+insert into orders
+values(null, 3, 'seller5', 'buyer3', 3, 60000, '2017-12-12',
+'order complete', null);
+
+insert into orders
+values(null, 5, 'seller5', 'buyer4', 4, 200000, '2017-12-13',
+'order complete', null);
+
+insert into orders
+values(null, 2, 'seller3', 'buyer5', 1, 40000, '2017-12-15',
+'order complete', null);
+
+insert into orders
+values(null, 3, 'seller5', 'buyer2', 2, 40000, '2017-12-16',
+'order complete', null);
+
+insert into orders
+values(null, 3, 'seller5', 'buyer4', 3, 60000, '2017-12-19',
+'order complete', null);
+
+
+
+insert into notice
+values(null, '2017-12-11', 'title1', 'content1', null);
+
+insert into notice
+values(null, '2017-12-12', 'title2', 'content2', null);
+
+insert into notice
+values(null, '2017-12-13', 'title3', 'content3', null);
+
+insert into notice
+values(null, '2017-12-15', 'title4', 'content4', null);
+
+insert into notice
+values(null, '2017-12-17', 'title5', 'content5', null);

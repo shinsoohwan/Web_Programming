@@ -1,0 +1,77 @@
+참조무결성제약조건 때문에 DB에서 삭제,수정할때
+설정을 해줘야합니다.
+
+현재 foreign key 로 설정되어있는게 전부 pk로 변하지 않아서
+그냥 fk 설정을 안하면 삭제,수정할때 코드 수정안해도 되기 때문에
+fk 지정한거 다 삭제했습니다.
+
+보고서 제출용은 fk 설정한걸로 해야겠죠?
+
+--------------------------------------
+
+mysql -u root -p
+(password)
+
+drop database web;
+create database web;
+use web;
+
+create table member
+(
+	id varchar(20) primary key,
+	password varchar(40),
+	mtype varchar(10)
+);
+
+create table seller
+(
+	s_id varchar(20),
+	name varchar(20),
+	phone varchar(20),
+	bank varchar(15),
+	account varchar(30)
+);
+
+create table buyer
+(
+	b_id varchar(20),
+	name varchar(20),
+	phone varchar(20),
+	address varchar(100)
+);
+
+create table product
+(
+	p_id int primary key auto_increment,
+	s_id varchar(20),
+	name varchar(20),
+	category1 varchar(20) not null,
+	category2 varchar(20),
+	price int,
+	measure varchar(20),
+	start_time date,
+	content text,
+	img_dir varchar(40)
+);
+
+create table orders
+(
+	o_id int primary key auto_increment,
+	p_id int,
+	s_id varchar(20),
+	b_id varchar(20),
+	numbers int,
+	price int,
+	order_time date,
+	status varchar(20),
+	delivery varchar(30)
+);
+
+create table notice
+(
+	numbers int primary key auto_increment,
+	write_date date,
+	title varchar(100),
+	content text,
+	img_dir varchar(40)
+);

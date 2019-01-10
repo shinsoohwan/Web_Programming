@@ -1,0 +1,83 @@
+마지막 수정이길
+
+id 자동 카운트 되도록 몇개 수정하고 테스트 데이터 추가했습니다.
+이미지는 main 화면에 사용되는 이미지 일단 썼고
+나중에 일괄적으로 변경하면 됩니다.
+
+로그인할때 필요한 회원정보는 따로 파일에 만들었습니다.
+비밀번호가 sha1 암호화를 거치고 DB에 저장됩니다.
+
+--------------------------------------
+
+mysql -u root -p
+(password)
+
+drop database web;
+create database web;
+use web;
+
+create table member
+(
+	id varchar(20) primary key,
+	password varchar(40),
+	mtype varchar(10)
+);
+
+create table seller
+(
+	s_id varchar(20),
+	name varchar(20),
+	phone varchar(20),
+	bank varchar(15),
+	account varchar(30),
+	foreign key(s_id) references member(id) on delete set null
+);
+
+create table buyer
+(
+	b_id varchar(20),
+	name varchar(20),
+	phone varchar(20),
+	address varchar(100),
+	foreign key(b_id) references member(id) on delete set null
+);
+
+create table product
+(
+	p_id int primary key auto_increment,
+	s_id varchar(20),
+	name varchar(20),
+	category1 varchar(20) not null,
+	category2 varchar(20),
+	price int,
+	measure varchar(20),
+	start_time date,
+	content text,
+	img_dir varchar(40),
+	foreign key(s_id) references seller(s_id) on delete set null
+);
+
+create table orders
+(
+	o_id int primary key auto_increment,
+	p_id int,
+	s_id varchar(20),
+	b_id varchar(20),
+	numbers int,
+	price int,
+	order_time date,
+	status varchar(20),
+	delivery varchar(30),
+	foreign key(p_id) references product(p_id) on delete set null,
+	foreign key(s_id) references seller(s_id) on delete set null,
+	foreign key(b_id) references buyer(b_id) on delete set null
+);
+
+create table notice
+(
+	numbers int primary key auto_increment,
+	write_date date,
+	title varchar(100),
+	content text,
+	img_dir varchar(40)
+);

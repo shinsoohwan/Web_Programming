@@ -1,0 +1,53 @@
+	body {
+			margin: 0;
+			padding: 0;
+			font-family: Malgun Gothic,"맑은 고딕",AppleGothic,Dotum,"돋움",sans-serif;
+			font-size: 1em;
+		}
+		a:link {
+			text-decoration: none;
+		}
+		a img {
+			border: 0;
+		}
+        #form_wrapper {
+			margin-left: 5%;
+			padding: 2%;
+		}
+        #join{ max-width:100%; width: 1200px; min-height: 100%; margin: 0 auto;}
+    #join .top{overflow: hidden; padding: 20px 0; border-bottom: 1px solid #dbdbdb;}
+	#join .top h2{float:left;font-weight:bold;  padding: 0 0 0 3px; color: #111; font-size: 28px;}
+	#join #join-form{width: 736px; margin: 0 auto; max-width:100%;}
+
+	#tit{overflow: hidden; border-bottom: 1px solid black;}
+	#tit h3{float: left; color: #000; font-size: 20px; font-weight: normal;}
+
+	#form_inner table{width: 100%;}
+	#form_inner tr{display: table-row; vertical-align: inherit; border-color: inherit;}
+	#form_inner th{padding: 20px; color: #333; font-size: 13px; vertical-align: top;background: #f9f9f9;border-bottom: 1px solid #dbdbdb;
+	text-align: left;}
+	#form_inner td{border-bottom: 1px solid #dbdbdb;}
+	#form_inner .txtfield{width: 80%; height: 31px; padding-left: 10px; margin-left: 10px; border: 1px solid #dbdbdb; color: #444; line-height: 31px;}
+	
+	#form_inner #phone1{width: 10%; height: 31px; padding-left: 10px; margin-left: 10px;margin-right: 5px; border: 1px solid #dbdbdb; color: #444; }
+	#form_inner #phone2{width: 20%; height: 31px; padding-left: 10px; margin-right: 5px; border: 1px solid #dbdbdb; color: #444; }
+	#form_inner #phone3{width: 20%; height: 31px; padding-left: 10px; border: 1px solid #dbdbdb; color: #444;}
+	#form_inner .btn{padding-top: 20px;padding-bottom: 100px; text-align: center;}
+#form_inner .btn .gaip{width: 203px;
+    height: 55px;
+    line-height: 53px;
+    font-size: 14px;    background: #ff5c01;
+    border: 1px solid #ff5c01;
+    color: #fff;
+	font-weight: bold;}
+#form_inner .btn .cancel{    width: 203px;
+    height: 55px;
+	line-height: 53px;
+	background: white;
+    font-size: 14px;    border: 1px solid #ff5c01;
+	color: #ff5c01;}
+	#form_inner .btn .gaip:hover{cursor:pointer; text-decoration:underline; background:#ff4d30;}
+	#form_inner .btn .cancel:hover{text-decoration: underline; background:#fff9f9; cursor: pointer;}
+	#form_inner .btn a:link{color: #ff5c01; text-decoration: none;}
+	#form_inner .btn a:visited{color: #ff5c01; text-decoration: none;}
+	#form_inner .btn a:hover{color: #ff5c01; text-decoration: underline;}

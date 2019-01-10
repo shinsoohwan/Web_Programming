@@ -1,0 +1,89 @@
+DB 수정했습니다.
+공유폴더에 올린 DB 스키마.xml 파일대로구요
+보는방법은
+draw.io 사이트에서 open 하시면 됩니다.
+
+이전 mysql.txt 대로 DB 생성했다고 가정하고 쿼리문 씁니다.
+
+쿼리문 제대로 짤 시간이 없어서 그냥 다 날리고 새로 쓰는걸로 합니다.
+
+회원가입에 필요한 member 테이블 추가했고
+상품정보 product 테이블에 가격price, 판매단위measure 추가했습니다.
+주문정보 orders 테이블에도 가격,수량 추가했습니다.
+공지사항 게시판 테이블 추가했습니다.
+
+지금 회원가입 기능 테스트 다시하고 샘플데이터 넣을게요.
+
+--------------------------------------------
+
+mysql -u root -p
+(password)
+
+drop database web;
+create database web;
+use web;
+
+create table member
+(
+	id varchar(20) primary key,
+	password varchar(40),
+	mtype varchar(20)
+);
+
+create table seller
+(
+	s_id varchar(20),
+	name varchar(20),
+	phone varchar(20),
+	account varchar(20),
+	foreign key(s_id) references member(id) on delete set null
+);
+
+create table buyer
+(
+	b_id varchar(20),
+	name varchar(20),
+	phone varchar(20),
+	address varchar(60),
+	foreign key(b_id) references member(id) on delete set null
+);
+
+create table product
+(
+	p_id varchar(20) primary key,
+	s_id varchar(20),
+	name varchar(20),
+	category1 varchar(20) not null,
+	category2 varchar(20),
+	price int,
+	measure varchar(20),
+	start_time date,
+	content text,
+	img_dir varchar(40),
+	foreign key(s_id) references seller(s_id) on delete set null
+);
+
+create table orders
+(
+	o_id varchar(20) primary key,
+	p_id varchar(20),
+	s_id varchar(20),
+	b_id varchar(20),
+	numbers int,
+	price int,
+	order_time date,
+	status varchar(20),
+	delivery varchar(30),
+	foreign key(p_id) references product(p_id) on delete set null,
+	foreign key(s_id) references seller(s_id) on delete set null,
+	foreign key(b_id) references buyer(b_id) on delete set null
+);
+
+create table notice
+(
+	numbers int primary key,
+	write_data date,
+	title varchar(100),
+	content text,
+	img_dir varchar(40)
+);

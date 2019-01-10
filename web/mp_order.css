@@ -1,0 +1,6 @@
+#form_inner tbody th,td{text-align: center;}
+#form_inner tbody td{height: 35px;}
+#form_inner tbody td a:link{color: black;text-decoration: underline;}
+#form_inner tbody td a:visited{color: black;text-decoration: underline;}
+#form_inner tbody td a:hover{color: #777;text-decoration: underline;}
+ #form_inner tr td img{width: 50px; height: 50px;}

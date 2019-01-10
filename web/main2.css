@@ -1,0 +1,87 @@
+#frame{width: 100%;}
+#top_menu{ max-width: 100%; height: 35px; padding: 0px 150px;  text-align: right;}
+#top_menu .slogan{float:left; width: 10%;padding-top: 20px;height: 35px;}
+#top_menu ul{float: right; list-style: none;}
+#top_menu ul li{  float:left;
+    min-height:15px;
+    padding:7px 10px 0;
+	font-size:12px;
+}
+#top_menu ul li a:link{color: black; text-decoration: none;}
+#top_menu ul li a:visited{color: black; text-decoration: none;}
+#top_menu ul li a:hover{color: black; text-decoration: underline;}
+
+#top_menu1{ height: 35px; padding: 0px 0px;  text-align: right; display: none;}
+#top_menu1 ul{float:left; list-style: none;}
+#top_menu1 ul li{  float:left;
+    min-height:15px;
+    padding:7px 10px 0;
+	font-size:12px;
+}
+#top_menu1 ul li a:link{color: black; text-decoration: none;}
+#top_menu1 ul li a:visited{color: black; text-decoration: none;}
+#top_menu1 ul li a:hover{color: black; text-decoration: underline;}
+
+
+#header{max-width: 100%;}
+#header h1{text-align: center;width:400px; max-width: 100%; }
+#header .ad-left,
+#header .ad,
+#header h1{ display:table-cell; height:125px; vertical-align:middle; padding-right: 200px;}
+#header .ad-left{padding-left:150px; padding-right: 180px; text-align:left;}
+#header .ad{padding-right:150px; text-align:right;}	
+
+#header1{display: none;}
+#header1 h1{max-width:400px; max-width:100%;}
+#header1 h1{ height:125px; }
+#header1 h1 img{max-width: 100%;}
+
+#menu1{width:100%; height: 55px; background: #ff5c01;text-align: center;}
+#menu1 ul{padding-top:17px;}                     /*  상단 여백 10px  */
+#menu1 ul li {
+            display:inline;                         /*  세로나열을 가로나열로 변경 */
+            border-left:1px solid #999;             /* 각 메뉴의 왼쪽에 "|" 표시(분류 표시) */
+			font:bold 15px italic; 
+			                    /* 폰트 설정 - 12px의 돋움체 굵은 글씨로 표시 */
+            padding:0 50px;                         /* 각 메뉴 간격 */
+    }
+#menu1 ul li:first-child{border-left:none;} 
+#menu1 ul li a:link{color: wheat; text-decoration: none; }
+#menu1 ul li a:visited{color: wheat; text-decoration: none;}
+#menu1 ul li a:hover{color: wheat; text-decoration: underline;}
+
+#menu2{width:100%; height: 110px; background: #ff5c01; text-align: center; display: none;}
+#menu2 ul{padding-top:17px;}                     /*  상단 여백 10px  */
+#menu2 ul li {
+            display:inline;                         /*  세로나열을 가로나열로 변경 */
+            border-left:1px solid #999;             /* 각 메뉴의 왼쪽에 "|" 표시(분류 표시) */
+			font:bold 15px italic; 
+			                    /* 폰트 설정 - 12px의 돋움체 굵은 글씨로 표시 */
+            padding:0 50px;                         /* 각 메뉴 간격 */
+    }
+#menu2 ul li:first-child{border-left:none;} 
+#menu2 ul li a:link{color: wheat; text-decoration: none;}
+#menu2 ul li a:visited{color: wheat; text-decoration: none;}
+#menu2 ul li a:hover{color: wheat; text-decoration: underline;}
+
+#menu2 ul#m2{display: none;}
+
+
+
+#slide{padding-top: 10px; height: 500px;}
+#slide div{float: left;}
+#slide #mainimage img{max-width: 100%; height: 500px; width: 1000px;}
+#lft{padding-top: 200px; padding-left: 181px;}
+#rght{padding-top: 200px;}
+#rght2{display: none;}
+
+
+#main-good-list h2{height:68px; text-align: center;width: 100%;}
+#main-good-list ul{list-style: none; display: none;}
+#main-good-list ul li.right{float: right; padding-right: 130px;}
+#main-good-list ul li.left{ padding-left: 130px;}
+
+#bottom{text-align: center;}
+#bottom img{margin-top: 15px; width: 80%; height:380px;}
+
+#footer img{margin-top: 20px; width: 100%; height:200px; }

@@ -1,0 +1,19 @@
+공지사항 게시판 테이블 수정
+
+-----------------------------
+
+mysql -u root -p
+(password)
+
+use web;
+
+drop table notice;
+
+create table notice
+(
+	numbers int primary key auto_increment,
+	write_date date,
+	title varchar(100),
+	content text,
+	img_dir varchar(40)
+);

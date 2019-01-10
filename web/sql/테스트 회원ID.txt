@@ -1,0 +1,16 @@
+관리자 계정
+admin / admin1
+
+판매자 계정
+seller1 / 123123
+seller2 / 123123
+seller3 / 123123
+seller4 / 123123
+seller5 / 123123
+
+구매자 계정
+buyer1 / 123123
+buyer2 / 123123
+buyer3 / 123123
+buyer4 / 123123
+buyer5 / 123123
